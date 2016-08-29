@@ -19,9 +19,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SeaOfRust_api" target="1.6" />
-      <module name="SeaOfRust_main" target="1.6" />
-      <module name="SeaOfRust_test" target="1.6" />
+      <module name="TheSeaOfRust_api" target="1.8" />
+      <module name="TheSeaOfRust_main" target="1.8" />
+      <module name="TheSeaOfRust_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
