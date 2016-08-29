@@ -17,6 +17,7 @@ import java.util.Random;
 public class BlockRustyDust extends Block {
     public BlockRustyDust() {
         super(Material.sand);
+        setStepSound(soundTypeSand);
         setCreativeTab(SeaOfRust.tab);
 //        setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
         setTickRandomly(true);

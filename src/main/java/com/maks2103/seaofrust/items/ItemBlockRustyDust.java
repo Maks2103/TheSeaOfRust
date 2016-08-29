@@ -49,12 +49,12 @@ public class ItemBlockRustyDust extends ItemBlock {
     }
 
     @SideOnly(Side.CLIENT)
-    public boolean func_150936_a(World world, int x, int y, int z, int meta, EntityPlayer p_150936_6_, ItemStack p_150936_7_) {
+    public boolean func_150936_a(World world, int x, int y, int z, int meta, EntityPlayer player, ItemStack itemStack) {
         Block block = world.getBlock(x, y, z);
         if(block != ModBlocks.rustyDust && world.getBlockMetadata(x, y, z) < 7) {
             y++;
         }
 
-        return block == rustyDust || world.canPlaceEntityOnSide(this.field_150939_a, x, y, z, false, meta, null, p_150936_7_);
+        return block == rustyDust || world.canPlaceEntityOnSide(this.field_150939_a, x, y, z, false, meta, null, itemStack);
     }
 }
