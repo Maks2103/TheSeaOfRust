@@ -1,0 +1,39 @@
+[12:59:33] [main/INFO]: Setting user: Player940
+[12:59:37] [Client thread/INFO]: LWJGL Version: 2.9.1
+[12:59:57] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Sea of Rust, FMLFileResourcePack:Grappling hook mod, FMLFileResourcePack:Transformers Mod G1 Edition, FMLFileResourcePack:Transformers Mod, FMLFileResourcePack:Waila
+[13:00:02] [Sound Library Loader/INFO]: Sound engine started
+[13:00:04] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[13:00:04] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[13:00:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Sea of Rust, FMLFileResourcePack:Grappling hook mod, FMLFileResourcePack:Transformers Mod G1 Edition, FMLFileResourcePack:Transformers Mod, FMLFileResourcePack:Waila
+[13:00:06] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[13:00:07] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[13:00:08] [Sound Library Loader/INFO]: Sound engine started
+[13:00:15] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[13:00:15] [Server thread/INFO]: Generating keypair
+[13:00:16] [Server thread/INFO]: Preparing start region for level 0
+[13:00:17] [Server thread/INFO]: Preparing spawn area: 18%
+[13:00:18] [Server thread/INFO]: Changing view distance to 8, from 10
+[13:00:19] [Server thread/INFO]: Player940[local:E:4bf1315f] logged in with entity id 354 at (22.279326302418816, 70.0, 233.7527492415498)
+[13:00:19] [Server thread/INFO]: Player940 joined the game
+[13:00:19] [Server thread/INFO]: Player940 has just earned the achievement [Transformers Mod]
+[13:00:20] [Client thread/INFO]: [CHAT] Player940 has just earned the achievement [Transformers Mod]
+[13:00:31] [Server thread/INFO]: Player940 has just earned the achievement [Taking Inventory]
+[13:00:31] [Client thread/INFO]: [CHAT] Player940 has just earned the achievement [Taking Inventory]
+[13:00:34] [Client thread/INFO]: Warning: Clientside chunk ticking took 113 ms
+[13:00:55] [Server thread/INFO]: Saving and pausing game...
+[13:00:55] [Server thread/INFO]: Saving chunks for level 'MTE'/Overworld
+[13:00:55] [Server thread/INFO]: Saving chunks for level 'MTE'/Nether
+[13:00:55] [Server thread/INFO]: Saving chunks for level 'MTE'/The End
+[13:04:03] [Server thread/INFO]: <Player940> st
+[13:04:03] [Client thread/INFO]: [CHAT] <Player940> st
+[13:11:08] [Server thread/INFO]: Saving and pausing game...
+[13:11:08] [Server thread/INFO]: Saving chunks for level 'MTE'/Overworld
+[13:11:09] [Server thread/INFO]: Saving chunks for level 'MTE'/Nether
+[13:11:09] [Server thread/INFO]: Saving chunks for level 'MTE'/The End
+[13:11:09] [Server thread/INFO]: Stopping server
+[13:11:09] [Server thread/INFO]: Saving players
+[13:11:09] [Server thread/INFO]: Saving worlds
+[13:11:09] [Server thread/INFO]: Saving chunks for level 'MTE'/Overworld
+[13:11:09] [Server thread/INFO]: Saving chunks for level 'MTE'/Nether
+[13:11:09] [Server thread/INFO]: Saving chunks for level 'MTE'/The End
+[13:11:11] [Client thread/INFO]: Stopping!

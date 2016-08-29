@@ -1,0 +1,14 @@
+{
+  "stat.flyOneCm": 1508,
+  "stat.walkOneCm": 1658,
+  "stat.jump": 3,
+  "achievement.tf.transformers_mod": 1,
+  "stat.playOneMinute": 1297,
+  "achievement.openInventory": 5,
+  "achievement.exploreAllBiomes": {
+    "value": 0,
+    "progress": [
+      "Plains"
+    ]
+  }
+}

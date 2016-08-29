@@ -1,0 +1,11 @@
+{
+  "achievement.tf.transformers_mod": 1,
+  "stat.playOneMinute": 75,
+  "achievement.openInventory": 1,
+  "achievement.exploreAllBiomes": {
+    "value": 0,
+    "progress": [
+      "Plains"
+    ]
+  }
+}

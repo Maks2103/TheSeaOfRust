@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeaOfRust.iml" filepath="$PROJECT_DIR$/.idea/modules/SeaOfRust.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeaOfRust_api.iml" filepath="$PROJECT_DIR$/.idea/modules/SeaOfRust_api.iml" group="SeaOfRust" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeaOfRust_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SeaOfRust_main.iml" group="SeaOfRust" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeaOfRust_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SeaOfRust_test.iml" group="SeaOfRust" />
+    </modules>
+  </component>
+</project>
