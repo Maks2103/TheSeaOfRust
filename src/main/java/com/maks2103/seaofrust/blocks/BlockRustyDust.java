@@ -19,9 +19,7 @@ public class BlockRustyDust extends Block {
         super(Material.sand);
         setStepSound(soundTypeSand);
         setCreativeTab(SeaOfRust.tab);
-//        setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
         setTickRandomly(true);
-//        setBlockTextureName("seaofrust:rusty_dust");
         setBlockName("rusty_dust");
         setBlockHeight(0);
     }
