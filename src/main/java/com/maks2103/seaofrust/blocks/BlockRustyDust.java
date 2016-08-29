@@ -4,19 +4,23 @@ import com.maks2103.seaofrust.SeaOfRust;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.event.ForgeEventFactory;
 
+import java.util.ArrayList;
 import java.util.Random;
 
-public class BlockRustyDust extends Block {
+public class BlockRustyDust extends BlockFalling {
     public BlockRustyDust() {
-        super(Material.sand);
         setStepSound(soundTypeSand);
         setCreativeTab(SeaOfRust.tab);
         setTickRandomly(true);
@@ -81,15 +85,20 @@ public class BlockRustyDust extends Block {
      * their own) Args: x, y, z, neighbor Block
      */
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
-        this.func_150155_m(world, x, y, z);
-    }
-
-    private boolean func_150155_m(World p_150155_1_, int p_150155_2_, int p_150155_3_, int p_150155_4_) {
-        if (!this.canPlaceBlockAt(p_150155_1_, p_150155_2_, p_150155_3_, p_150155_4_)) {
-            p_150155_1_.setBlockToAir(p_150155_2_, p_150155_3_, p_150155_4_);
-            return false;
-        } else {
-            return true;
+        if(world.getBlock(x, y - 1, z) == ModBlocks.rustyDust && world.getBlockMetadata(x, y - 1, z) < 8) {
+            int delta = 7 - world.getBlockMetadata(x, y - 1, z);
+            if(delta >= world.getBlockMetadata(x, y, z)) {
+                world.setBlockMetadataWithNotify(x, y - 1, z, world.getBlockMetadata(x, y - 1, z) + world.getBlockMetadata(x, y, z), 2);
+                world.setBlockToAir(x, y, z);
+            } else {
+                int last = world.getBlockMetadata(x, y, z) - delta;
+                world.setBlockMetadataWithNotify(x, y, z, last, 2);
+                world.setBlockMetadataWithNotify(x, y - 1, z, 7, 2);
+            }
+        }
+        world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.rustyDust);
+        if (!this.canPlaceBlockAt(world, x, y, z) && world.getBlock(x, y, z) != ModBlocks.rustyDust) {
+            world.setBlockToAir(x, y, z);
         }
     }
 
@@ -128,7 +137,28 @@ public class BlockRustyDust extends Block {
      * @return The number of items to drop
      */
     public int quantityDropped(int meta, int fortune, Random random) {
-        return (meta & 7) + 1;
+        return meta + 1;
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float ux, float uy, float uz) {
+        Item equippedItem = player.getCurrentEquippedItem().getItem();
+        //TODO rewrite
+        if(equippedItem == Items.wooden_shovel || equippedItem == Items.stone_shovel || equippedItem == Items.iron_shovel ||
+                equippedItem == Items.golden_shovel || equippedItem == Items.diamond_shovel) {
+            player.getCurrentEquippedItem().damageItem(1, player);
+            int blockMetadata = world.getBlockMetadata(x, y, z) - 1;
+            if(blockMetadata < 0) {
+                this.harvestBlock(world, player, x, y, z, blockMetadata + 1);
+                return true;
+            }
+            ForgeEventFactory.fireBlockHarvesting(new ArrayList<>(), world, this, x, y, z, blockMetadata, 0, 1.0f, false, player);
+            world.setBlockMetadataWithNotify(x, y, z, blockMetadata, 2);
+            this.dropBlockAsItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(ModBlocks.rustyDust)));
+            world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.rustyDust);
+            return true;
+        }
+        return false;
     }
 
     /**
