@@ -1,4 +1,4 @@
-package com.maks2103.seaofrust.blocks;
+package com.maks2103.seaofrust.block;
 
 import com.maks2103.seaofrust.SeaOfRust;
 import cpw.mods.fml.relauncher.Side;
@@ -20,7 +20,7 @@ import java.util.Random;
 public class BlockRustyDust extends BlockFalling {
     BlockRustyDust() {
         setStepSound(soundTypeSand);
-        setCreativeTab(SeaOfRust.tab);
+        setCreativeTab(SeaOfRust.CREATIVE_TAB);
         setTickRandomly(true);
         setBlockName("rusty_dust");
         setBlockHeight(0);

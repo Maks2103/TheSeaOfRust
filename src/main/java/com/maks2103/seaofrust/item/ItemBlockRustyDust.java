@@ -1,6 +1,6 @@
-package com.maks2103.seaofrust.items;
+package com.maks2103.seaofrust.item;
 
-import com.maks2103.seaofrust.blocks.ModBlocks;
+import com.maks2103.seaofrust.block.ModBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -9,7 +9,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import static com.maks2103.seaofrust.blocks.ModBlocks.rustyDust;
+import static com.maks2103.seaofrust.block.ModBlocks.rustyDust;
 
 public class ItemBlockRustyDust extends ItemBlock {
     public ItemBlockRustyDust(Block block) {

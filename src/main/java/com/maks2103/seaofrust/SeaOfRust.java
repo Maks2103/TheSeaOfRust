@@ -1,6 +1,6 @@
 package com.maks2103.seaofrust;
 
-import com.maks2103.seaofrust.blocks.ModBlocks;
+import com.maks2103.seaofrust.block.ModBlocks;
 import com.maks2103.seaofrust.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -17,7 +17,7 @@ public class SeaOfRust {
     public static final String NAME = "The Sea of Rust";
     public static final String VERSION = "0.1";
 
-    public static CreativeTabs tab = new CreativeTabs("sea_of_rust") {
+    public static CreativeTabs CREATIVE_TAB = new CreativeTabs("sea_of_rust") {
         @Override
         public Item getTabIconItem() {
             return Item.getItemFromBlock(ModBlocks.rustyDust);
