@@ -14,13 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeEventFactory;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class BlockRustyDust extends BlockFalling {
-    public BlockRustyDust() {
+    BlockRustyDust() {
         setStepSound(soundTypeSand);
         setCreativeTab(SeaOfRust.tab);
         setTickRandomly(true);
@@ -142,18 +140,16 @@ public class BlockRustyDust extends BlockFalling {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float ux, float uy, float uz) {
-        Item equippedItem = player.getCurrentEquippedItem().getItem();
-        //TODO rewrite
-        if(equippedItem instanceof ItemSpade) {
-            player.getCurrentEquippedItem().damageItem(1, player);
+        ItemStack currentEquippedItem = player.getCurrentEquippedItem();
+        if(currentEquippedItem.getItem() instanceof ItemSpade) {
+            currentEquippedItem.damageItem(1, player);
             int blockMetadata = world.getBlockMetadata(x, y, z) - 1;
             if(blockMetadata < 0) {
                 this.harvestBlock(world, player, x, y, z, blockMetadata + 1);
                 return true;
             }
-            ForgeEventFactory.fireBlockHarvesting(new ArrayList<>(), world, this, x, y, z, blockMetadata, 0, 1.0f, false, player);
             world.setBlockMetadataWithNotify(x, y, z, blockMetadata, 2);
-            this.dropBlockAsItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(ModBlocks.rustyDust)));
+            dropBlockAsItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(ModBlocks.rustyDust)));
             world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.rustyDust);
             return true;
         }
