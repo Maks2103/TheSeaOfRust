@@ -8,8 +8,8 @@ import net.minecraft.block.BlockFalling;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
@@ -85,7 +85,7 @@ public class BlockRustyDust extends BlockFalling {
      * their own) Args: x, y, z, neighbor Block
      */
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
-        if(world.getBlock(x, y - 1, z) == ModBlocks.rustyDust && world.getBlockMetadata(x, y - 1, z) < 8) {
+        if(world.getBlock(x, y - 1, z) == ModBlocks.rustyDust && world.getBlockMetadata(x, y - 1, z) < 7) {
             int delta = 7 - world.getBlockMetadata(x, y - 1, z);
             if(delta >= world.getBlockMetadata(x, y, z)) {
                 world.setBlockMetadataWithNotify(x, y - 1, z, world.getBlockMetadata(x, y - 1, z) + world.getBlockMetadata(x, y, z), 2);
@@ -144,8 +144,7 @@ public class BlockRustyDust extends BlockFalling {
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float ux, float uy, float uz) {
         Item equippedItem = player.getCurrentEquippedItem().getItem();
         //TODO rewrite
-        if(equippedItem == Items.wooden_shovel || equippedItem == Items.stone_shovel || equippedItem == Items.iron_shovel ||
-                equippedItem == Items.golden_shovel || equippedItem == Items.diamond_shovel) {
+        if(equippedItem instanceof ItemSpade) {
             player.getCurrentEquippedItem().damageItem(1, player);
             int blockMetadata = world.getBlockMetadata(x, y, z) - 1;
             if(blockMetadata < 0) {
