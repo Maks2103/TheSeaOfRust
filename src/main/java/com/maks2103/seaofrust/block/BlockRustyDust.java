@@ -75,7 +75,7 @@ public class BlockRustyDust extends BlockFalling {
      */
     public boolean canPlaceBlockAt(World world, int x, int y, int z) {
         Block block = world.getBlock(x, y - 1, z);
-        return (block != Blocks.ice && block != Blocks.packed_ice) && (block.isLeaves(world, x, y - 1, z) || (block == this && (world.getBlockMetadata(x, y - 1, z) & 7) == 7 || block.isOpaqueCube() && block.getMaterial().blocksMovement()));
+        return block != Blocks.air && (block != Blocks.ice && block != Blocks.packed_ice) && (block.isLeaves(world, x, y - 1, z) || (block == this && (world.getBlockMetadata(x, y - 1, z) & 7) == 7 || block.isOpaqueCube() && block.getMaterial().blocksMovement()));
     }
 
     /**
