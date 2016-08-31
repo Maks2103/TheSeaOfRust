@@ -141,7 +141,7 @@ public class BlockRustyDust extends BlockFalling {
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float ux, float uy, float uz) {
         ItemStack currentEquippedItem = player.getCurrentEquippedItem();
-        if(currentEquippedItem.getItem() instanceof ItemSpade) {
+        if(currentEquippedItem != null && currentEquippedItem.getItem() instanceof ItemSpade) {
             currentEquippedItem.damageItem(1, player);
             int blockMetadata = world.getBlockMetadata(x, y, z) - 1;
             if(blockMetadata < 0) {

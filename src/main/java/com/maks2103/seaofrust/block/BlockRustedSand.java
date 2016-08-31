@@ -21,6 +21,7 @@ public class BlockRustedSand extends BlockFalling {
         super(Material.sand);
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
         setBlockName("rusted_sand");
+        setStepSound(soundTypeSand);
     }
 
     @SideOnly(Side.CLIENT)
