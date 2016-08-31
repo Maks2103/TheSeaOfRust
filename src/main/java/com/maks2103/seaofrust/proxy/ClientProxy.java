@@ -1,6 +1,7 @@
 package com.maks2103.seaofrust.proxy;
 
 import com.maks2103.seaofrust.block.ModBlocks;
+import com.maks2103.seaofrust.entity.ModEntities;
 import com.maks2103.seaofrust.item.ModItems;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -17,6 +18,7 @@ public class ClientProxy extends CommonProxy {
         super.init(event);
         ModBlocks.clinit();
         ModItems.clinit();
+        ModEntities.clinit();
     }
 
     @Override
