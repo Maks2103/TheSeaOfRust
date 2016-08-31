@@ -1,4 +1,5 @@
 ﻿itemGroup.sea_of_rust=The Sea of Rust
 tile.rusty_dust.name=Ржавая Пыль
 tile.rusted_sand.name=Ржавый Песок
+tile.rusted_iron_block.name=Ржавый Железный Блок
 item.rust.name=Ржавчина

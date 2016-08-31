@@ -1,4 +1,5 @@
 itemGroup.sea_of_rust=The Sea of Rust
 tile.rusty_dust.name=Rusty Dust
 tile.rusted_sand.name=Rusted Sand
+tile.rusted_iron_block.name=Block of Rusted Iron
 item.rust.name=Rust
