@@ -4,3 +4,4 @@ tile.rusted_sand.name=Ржавый Песок
 tile.rusted_iron_block.name=Ржавый Железный Блок
 item.rust.name=Ржавчина
 item.chunk_of_rust.name=Фрагмент Ржавого Металла
+item.energon_bucket.name=Ведро Энергона
