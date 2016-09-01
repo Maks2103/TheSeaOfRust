@@ -4,4 +4,5 @@ tile.rusted_sand.name=Rusted Sand
 tile.rusted_iron_block.name=Block of Rusted Iron
 item.rust.name=Rust
 item.chunk_of_rust.name=Rusted Metal Chunk
-item.energon_bucket.name=Bucket of Energon
+item.bucket_of_energon.name=Bucket of Energon
+item.bucket_of_energon_refininement_waste.name=Bucket of Energon Refinement Waste
