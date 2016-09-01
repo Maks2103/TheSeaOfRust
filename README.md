@@ -1,3 +1,3 @@
 # TheSeaOfRust
 
-This mod for Minecraft map.
+This is mod for Minecraft.
