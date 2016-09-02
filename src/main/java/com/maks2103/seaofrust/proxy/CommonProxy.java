@@ -2,6 +2,7 @@ package com.maks2103.seaofrust.proxy;
 
 import com.maks2103.seaofrust.block.ModBlocks;
 import com.maks2103.seaofrust.entity.ModEntities;
+import com.maks2103.seaofrust.fluid.FluidRegistry;
 import com.maks2103.seaofrust.item.ModItems;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -19,6 +20,7 @@ public class CommonProxy {
         ModBlocks.init();
         ModItems.init();
         ModEntities.init();
+        FluidRegistry.init();
     }
 
     @EventHandler
