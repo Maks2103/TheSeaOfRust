@@ -2,6 +2,9 @@
 tile.rusty_dust.name=Ржавая Пыль
 tile.rusted_sand.name=Ржавый Песок
 tile.rusted_iron_block.name=Ржавый Железный Блок
+tile.energon.name=Энергон
+tile.refined_energon.name=Очищенный Энергон
+tile.energon_refinement_waste.name=Отходы Очистки Энергона
 item.rust.name=Ржавчина
 tile.grapple_point.name=Точка для захвата крюком
 item.chunk_of_rust.name=Фрагмент Ржавого Металла
