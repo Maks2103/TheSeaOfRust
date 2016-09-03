@@ -7,8 +7,8 @@ import net.minecraftforge.fluids.Fluid;
 public class FluidRegistry {
     public static Fluid refinementWaste = new Fluid("energon_refinement_waste");
     public static Fluid energon = new Fluid("energon");
-    private static Block refinemendWasteBlock;
-    private static Block energonBlock;
+    static Block refinemendWasteBlock;
+    static Block energonBlock;
 
     public static void init() {
         refinementWaste.setTemperature(1500);

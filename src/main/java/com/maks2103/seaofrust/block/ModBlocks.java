@@ -2,6 +2,8 @@ package com.maks2103.seaofrust.block;
 
 import com.maks2103.seaofrust.item.ItemBlockRustyDust;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModBlocks {
     public static BlockRustyDust rustyDust;
@@ -16,6 +18,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(grapplePoint = new BlockGrapplePoint(), "grapple_point");
     }
 
+    @SideOnly(Side.CLIENT)
     public static void clinit() {
 
     }

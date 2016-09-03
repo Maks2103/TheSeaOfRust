@@ -3,7 +3,9 @@ package com.maks2103.seaofrust.fluid;
 import com.maks2103.seaofrust.SeaOfRust;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
 
 public class EnergonRefinementWasteFluid extends BlockFluidClassic {
@@ -26,14 +28,10 @@ public class EnergonRefinementWasteFluid extends BlockFluidClassic {
         icons[1] = iconRegister.registerIcon("seaofrust:energon_refinement_waste_flow");
     }
 
-//    @Override
-//    public void updateTick(World world, int x, int y, int z, Random rand) {
-//        super.updateTick(world, x, y, z, rand);
-//        EntityPlayer player = world.
-//        if(player != null) {
-//            player.attackEntityFrom(DamageSource.lava, 4.0F);
-//        }
-//    }
+    @Override
+    public boolean canPlaceBlockAt(World world, int x, int y, int z) {
+        return world.getBlock(x, y, z) == FluidRegistry.refinemendWasteBlock || world.getBlock(x, y, z) == Blocks.air;
+    }
 }
 
 

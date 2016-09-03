@@ -3,7 +3,9 @@ package com.maks2103.seaofrust.fluid;
 import com.maks2103.seaofrust.SeaOfRust;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
 
 public class EnergonFluid extends BlockFluidClassic {
@@ -24,5 +26,10 @@ public class EnergonFluid extends BlockFluidClassic {
     public void registerBlockIcons(IIconRegister iconRegister) {
         icons[0] = iconRegister.registerIcon("seaofrust:energon_still");
         icons[1] = iconRegister.registerIcon("seaofrust:energon_flow");
+    }
+
+    @Override
+    public boolean canPlaceBlockAt(World world, int x, int y, int z) {
+        return world.getBlock(x, y, z) == FluidRegistry.energonBlock || world.getBlock(x, y, z) == Blocks.air;
     }
 }
