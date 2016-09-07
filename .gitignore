@@ -122,3 +122,4 @@ src/api/
 src/test/
 
 *.old
+*.outdated
