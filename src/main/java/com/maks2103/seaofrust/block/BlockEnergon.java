@@ -45,6 +45,6 @@ public class BlockEnergon extends BlockFluidClassic {
 
     @Override
     public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
-        entity.attackEntityFrom(new DamageSource("maks2103"), 4.0F);
+        entity.attackEntityFrom(new DamageSource("energon"), 4.0F);
     }
 }

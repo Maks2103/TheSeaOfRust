@@ -11,4 +11,5 @@ item.chunk_of_rust.name=Chunk of Rusted Metal
 item.bucket_of_energon.name=Bucket of Energon
 item.bucket_of_refined_energon.name=Bucket of Refined Energon
 item.bucket_of_energon_refinement_waste.name=Bucket of Energon Refinement Waste
-death.attack.maks2103=%1$s pushed into the bucket by Maks2103
+death.attack.energon=%1$s tried to swim in the energon
+death.attack.acid=%1$s tried to swim in acid
