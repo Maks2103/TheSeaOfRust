@@ -10,3 +10,5 @@ tile.grapple_point.name=Точка для захвата крюком
 item.chunk_of_rust.name=Фрагмент Ржавого Металла
 item.bucket_of_energon.name=Ведро Энергона
 item.bucket_of_energon_refininement_waste.name=Ведро Отходов Очистки Энергона
+death.attack.energon=%1$s попробовал поплавать в энергоне
+death.attack.acid=%1$s попробовал поплавать в кислоте
