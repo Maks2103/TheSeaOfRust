@@ -20,7 +20,7 @@ public class SeaOfRust {
     public static CreativeTabs CREATIVE_TAB = new CreativeTabs("sea_of_rust") {
         @Override
         public Item getTabIconItem() {
-            return Item.getItemFromBlock(ModBlocks.rustyDust);
+            return Item.getItemFromBlock(ModBlocks.RUSTY_DUST);
         }
     };
 

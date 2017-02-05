@@ -83,7 +83,7 @@ public class BlockRustyDust extends BlockFalling {
      * their own) Args: x, y, z, neighbor Block
      */
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
-        if(world.getBlock(x, y - 1, z) == ModBlocks.rustyDust && world.getBlockMetadata(x, y - 1, z) < 7) {
+        if (world.getBlock(x, y - 1, z) == ModBlocks.RUSTY_DUST && world.getBlockMetadata(x, y - 1, z) < 7) {
             int delta = 7 - world.getBlockMetadata(x, y - 1, z);
             if(delta >= world.getBlockMetadata(x, y, z)) {
                 world.setBlockMetadataWithNotify(x, y - 1, z, world.getBlockMetadata(x, y - 1, z) + world.getBlockMetadata(x, y, z), 2);
@@ -94,8 +94,8 @@ public class BlockRustyDust extends BlockFalling {
                 world.setBlockMetadataWithNotify(x, y - 1, z, 7, 2);
             }
         }
-        world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.rustyDust);
-        if (!this.canPlaceBlockAt(world, x, y, z) && world.getBlock(x, y, z) != ModBlocks.rustyDust) {
+        world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.RUSTY_DUST);
+        if (!this.canPlaceBlockAt(world, x, y, z) && world.getBlock(x, y, z) != ModBlocks.RUSTY_DUST) {
             world.setBlockToAir(x, y, z);
         }
     }
@@ -149,8 +149,8 @@ public class BlockRustyDust extends BlockFalling {
                 return true;
             }
             world.setBlockMetadataWithNotify(x, y, z, blockMetadata, 2);
-            dropBlockAsItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(ModBlocks.rustyDust)));
-            world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.rustyDust);
+            dropBlockAsItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(ModBlocks.RUSTY_DUST)));
+            world.notifyBlockOfNeighborChange(x, y + 1, z, ModBlocks.RUSTY_DUST);
             return true;
         }
         return false;

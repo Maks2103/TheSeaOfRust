@@ -15,13 +15,13 @@ public class ModItems {
     public static void init() {
         GameRegistry.registerItem(rust = new ItemRust(), "rust");
         GameRegistry.registerItem(chunkOfRust = new ItemChunkOfRust(), "chunk_of_rust");
-        GameRegistry.registerItem(energonRefinementWasteBucket = new ItemModBucket(ModBlocks.energonRefinemendWasteBlock), "bucket_of_energon_refinemend_waste");
-        GameRegistry.registerItem(energonBucket = new ItemModBucket(ModBlocks.energonBlock), "bucket_of_energon");
-        GameRegistry.registerItem(refinedEnergonBucket = new ItemModBucket(ModBlocks.refinedEnergonBlock), "bucket_of_refined_energon");
+        GameRegistry.registerItem(energonRefinementWasteBucket = new ItemModBucket(ModBlocks.ENERGON_REFINEMENT_WASTE), "bucket_of_energon_refinemend_waste");
+        GameRegistry.registerItem(energonBucket = new ItemModBucket(ModBlocks.ENERGON), "bucket_of_energon");
+        GameRegistry.registerItem(refinedEnergonBucket = new ItemModBucket(ModBlocks.REFINED_ENERGON), "bucket_of_refined_energon");
     }
 
     @SideOnly(Side.CLIENT)
-    public static void clinit() {
+    public static void clientInit() {
 
     }
 }

@@ -43,13 +43,13 @@ public class CommonProxy {
         Block block = event.world.getBlock(event.target.blockX, event.target.blockY, event.target.blockZ);
 
         Item bucket = null;
-        if(block == ModBlocks.energonRefinemendWasteBlock) {
+        if (block == ModBlocks.ENERGON_REFINEMENT_WASTE) {
             bucket = ModItems.energonRefinementWasteBucket;
         }
-        if(block == ModBlocks.energonBlock) {
+        if (block == ModBlocks.ENERGON) {
             bucket = ModItems.energonBucket;
         }
-        if(block == ModBlocks.refinedEnergonBlock) {
+        if (block == ModBlocks.REFINED_ENERGON) {
             bucket = ModItems.refinedEnergonBucket;
         }
 

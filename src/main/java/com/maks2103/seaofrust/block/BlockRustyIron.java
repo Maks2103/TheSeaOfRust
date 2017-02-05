@@ -29,27 +29,27 @@ public class BlockRustyIron extends Block {
                 switch (i) {
                     case 0:
                         if(world.getBlock(x, y + 1, z) == Blocks.iron_block)
-                            world.setBlock(x, y + 1, z, ModBlocks.rustyIron);
+                            world.setBlock(x, y + 1, z, ModBlocks.RUSTY_IRON);
                         break;
                     case 1:
                         if(world.getBlock(x, y - 1, z) == Blocks.iron_block)
-                            world.setBlock(x, y - 1, z, ModBlocks.rustyIron);
+                            world.setBlock(x, y - 1, z, ModBlocks.RUSTY_IRON);
                         break;
                     case 2:
                         if(world.getBlock(x + 1, y, z) == Blocks.iron_block)
-                            world.setBlock(x + 1, y, z, ModBlocks.rustyIron);
+                            world.setBlock(x + 1, y, z, ModBlocks.RUSTY_IRON);
                         break;
                     case 3:
                         if(world.getBlock(x - 1, y, z) == Blocks.iron_block)
-                            world.setBlock(x - 1, y, z, ModBlocks.rustyIron);
+                            world.setBlock(x - 1, y, z, ModBlocks.RUSTY_IRON);
                         break;
                     case 4:
                         if(world.getBlock(x, y, z + 1) == Blocks.iron_block)
-                            world.setBlock(x, y, z + 1, ModBlocks.rustyIron);
+                            world.setBlock(x, y, z + 1, ModBlocks.RUSTY_IRON);
                         break;
                     case 5:
                         if(world.getBlock(x, y, z - 1) == Blocks.iron_block)
-                            world.setBlock(x, y, z - 1, ModBlocks.rustyIron);
+                            world.setBlock(x, y, z - 1, ModBlocks.RUSTY_IRON);
                         break;
                 }
             }
