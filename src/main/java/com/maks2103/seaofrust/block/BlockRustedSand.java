@@ -20,6 +20,9 @@ public class BlockRustedSand extends BlockFalling {
     protected BlockRustedSand() {
         super(Material.sand);
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
+        setHardness(0.5F);
+        setResistance(2.5F);
+        setHarvestLevel("shovel", 0);
         setBlockName("rusted_sand");
         setStepSound(soundTypeSand);
     }

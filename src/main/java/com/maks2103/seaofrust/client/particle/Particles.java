@@ -4,7 +4,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
-import net.minecraft.world.World;
 
 @SideOnly(Side.CLIENT)
 public class Particles {
@@ -32,7 +31,7 @@ public class Particles {
                 }
 
                 Minecraft.getMinecraft().effectRenderer.addEffect(var21);
-                return (EntityFX) var21;
+                return var21;
             }
         }
         return null;

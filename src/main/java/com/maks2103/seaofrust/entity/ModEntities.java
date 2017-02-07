@@ -17,6 +17,6 @@ public class ModEntities {
 
     @SideOnly(Side.CLIENT)
     public static void clientInit() {
-        registerEntityRenderingHandler(EntityChunkOfRust.class, new RenderSnowball(ModItems.chunkOfRust));
+        registerEntityRenderingHandler(EntityChunkOfRust.class, new RenderSnowball(ModItems.CHUNK_OF_RUST));
     }
 }

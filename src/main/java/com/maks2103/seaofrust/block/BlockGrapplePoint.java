@@ -11,7 +11,7 @@ public class BlockGrapplePoint extends Block {
         setBlockTextureName("seaofrust:grapple_point");
         setStepSound(soundTypeMetal);
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
-        setHardness(5.0F);
+        setHardness(2.5F);
         setResistance(10.0F);
         setHarvestLevel("pickaxe", 1);
     }

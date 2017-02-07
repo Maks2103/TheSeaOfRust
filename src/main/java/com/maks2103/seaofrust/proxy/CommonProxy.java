@@ -4,6 +4,7 @@ import com.maks2103.seaofrust.block.ModBlocks;
 import com.maks2103.seaofrust.entity.ModEntities;
 import com.maks2103.seaofrust.fluid.ModFluids;
 import com.maks2103.seaofrust.item.ModItems;
+import com.maks2103.seaofrust.recipe.ModRecipes;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -28,6 +29,7 @@ public class CommonProxy {
         ModBlocks.init();
         ModItems.init();
         ModEntities.init();
+        ModRecipes.init();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -44,13 +46,13 @@ public class CommonProxy {
 
         Item bucket = null;
         if (block == ModBlocks.ENERGON_REFINEMENT_WASTE) {
-            bucket = ModItems.energonRefinementWasteBucket;
+            bucket = ModItems.ENERGON_REFINEMENT_WASTE_BUCKET;
         }
         if (block == ModBlocks.ENERGON) {
-            bucket = ModItems.energonBucket;
+            bucket = ModItems.ENERGON_BUCKET;
         }
         if (block == ModBlocks.REFINED_ENERGON) {
-            bucket = ModItems.refinedEnergonBucket;
+            bucket = ModItems.REFINED_ENERGON_BUCKET;
         }
 
         if(bucket != null && event.world.getBlockMetadata(event.target.blockX, event.target.blockY, event.target.blockZ) == 0) {

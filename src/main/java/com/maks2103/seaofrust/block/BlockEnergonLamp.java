@@ -19,8 +19,13 @@ public class BlockEnergonLamp extends Block {
     private IIcon[][] icons = new IIcon[2][6];
 
     protected BlockEnergonLamp(boolean powered) {
-        super(Material.redstoneLight);
+        super(Material.iron);
         this.powered = powered;
+        setBlockName("energon_lamp");
+        setStepSound(soundTypeMetal);
+        setHardness(5.0F);
+        setResistance(10.0F);
+        setHarvestLevel("pickaxe", 1);
         if (!powered) {
             setCreativeTab(SeaOfRust.CREATIVE_TAB);
         }

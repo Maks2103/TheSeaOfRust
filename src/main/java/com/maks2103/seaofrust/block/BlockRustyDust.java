@@ -21,6 +21,9 @@ public class BlockRustyDust extends BlockFalling {
     BlockRustyDust() {
         setStepSound(soundTypeSand);
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
+        setHardness(0.5F);
+        setResistance(2.5F);
+        setHarvestLevel("shovel", 0);
         setTickRandomly(true);
         setBlockName("rusty_dust");
         setBlockHeight(0);

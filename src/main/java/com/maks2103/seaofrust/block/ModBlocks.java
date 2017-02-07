@@ -29,7 +29,7 @@ public class ModBlocks {
     }
 
     @SideOnly(Side.CLIENT)
-    public static void cleintInit() {
+    public static void clientInit() {
 
     }
 }

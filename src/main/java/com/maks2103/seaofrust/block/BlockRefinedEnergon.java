@@ -4,7 +4,6 @@ import com.maks2103.seaofrust.SeaOfRust;
 import com.maks2103.seaofrust.fluid.ModFluids;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -14,7 +13,7 @@ public class BlockRefinedEnergon extends BlockFluidClassic {
     private IIcon[] icons = new IIcon[2];
 
     public BlockRefinedEnergon() {
-        super(ModFluids.refinedEnergon, Material.water);
+        super(ModFluids.REFINED_ENERGON, Material.water);
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
         setBlockName("refined_energon");
     }
@@ -28,7 +27,7 @@ public class BlockRefinedEnergon extends BlockFluidClassic {
     public void registerBlockIcons(IIconRegister iconRegister) {
         icons[0] = iconRegister.registerIcon("seaofrust:refined_energon_still");
         icons[1] = iconRegister.registerIcon("seaofrust:refined_energon_flow");
-        ModFluids.refinedEnergon.setIcons(icons[0], icons[1]);
+        ModFluids.REFINED_ENERGON.setIcons(icons[0], icons[1]);
     }
 
     @Override

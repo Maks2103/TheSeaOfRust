@@ -16,7 +16,7 @@ public class BlockRustyIron extends Block {
         setBlockName("rusted_iron_block");
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
         setBlockTextureName("seaofrust:rusted_iron_block");
-        setHardness(5.0F);
+        setHardness(2.5F);
         setResistance(10.0F);
         setHarvestLevel("pickaxe", 1);
         setTickRandomly(true);
