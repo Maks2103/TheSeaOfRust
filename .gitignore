@@ -124,3 +124,5 @@ src/test/
 *.old
 *.outdated
 *.olddated
+/TransformersMod-master/
+!/TransformersMod-master/

@@ -20,16 +20,16 @@ public class ModRecipes {
                 'R', ModItems.CHUNK_OF_RUST
         );
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.CHUNK_OF_RUST, 9), ModBlocks.RUSTY_IRON);
-        GameRegistry.addShapedRecipe(
-                new ItemStack(ModBlocks.ENERGON_LAMP),
-                "IGI",
-                "GEG",
-                "IRI",
-                'I', Items.iron_ingot,
-                'E', ModItems.ENERGON_BUCKET,
-                'G', Blocks.glass,
-                'R', Items.redstone
-        );
+//        GameRegistry.addShapedRecipe(
+//                new ItemStack(ModBlocks.ENERGON_LAMP),
+//                "IGI",
+//                "GEG",
+//                "IRI",
+//                'I', Items.iron_ingot,
+//                'E', ModItems.ENERGON_BUCKET,
+//                'G', Blocks.glass,
+//                'R', Items.redstone
+//        );
         GameRegistry.addShapedRecipe(
                 new ItemStack(ModBlocks.RUSTY_IRON),
                 " W ",
@@ -42,15 +42,12 @@ public class ModRecipes {
         GameRegistry.addShapedRecipe(
                 new ItemStack(ModBlocks.RUSTY_DUST, 6),
                 "SSS",
-                "   ",
-                "   ",
                 'S', ModBlocks.RUSTED_SAND
         );
         GameRegistry.addShapedRecipe(
                 new ItemStack(ModBlocks.RUSTED_SAND, 3),
                 "DDD",
                 "DDD",
-                "   ",
                 'D', ModBlocks.RUSTY_DUST
         );
         GameRegistry.addShapedRecipe(

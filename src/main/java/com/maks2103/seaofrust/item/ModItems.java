@@ -1,9 +1,13 @@
 package com.maks2103.seaofrust.item;
 
 import com.maks2103.seaofrust.block.ModBlocks;
+import com.maks2103.seaofrust.fluid.ModFluids;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidContainerRegistry;
 
 public class ModItems {
     public static final ItemRust RUST = new ItemRust();
@@ -16,8 +20,11 @@ public class ModItems {
         GameRegistry.registerItem(RUST, "rust");
         GameRegistry.registerItem(CHUNK_OF_RUST, "chunk_of_rust");
         GameRegistry.registerItem(ENERGON_REFINEMENT_WASTE_BUCKET, "bucket_of_energon_refinemend_waste");
+        FluidContainerRegistry.registerFluidContainer(ModFluids.ENERGON_REFINEMENT_WASTE, new ItemStack(ENERGON_REFINEMENT_WASTE_BUCKET), new ItemStack(Items.bucket));
         GameRegistry.registerItem(ENERGON_BUCKET, "bucket_of_energon");
+        FluidContainerRegistry.registerFluidContainer(ModFluids.ENERGON, new ItemStack(ENERGON_BUCKET), new ItemStack(Items.bucket));
         GameRegistry.registerItem(REFINED_ENERGON_BUCKET, "bucket_of_refined_energon");
+        FluidContainerRegistry.registerFluidContainer(ModFluids.REFINED_ENERGON, new ItemStack(REFINED_ENERGON_BUCKET), new ItemStack(Items.bucket));
     }
 
     @SideOnly(Side.CLIENT)

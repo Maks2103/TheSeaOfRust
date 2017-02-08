@@ -18,6 +18,7 @@ public class BlockEnergon extends BlockFluidClassic {
         super(ModFluids.ENERGON, Material.water);
         setCreativeTab(SeaOfRust.CREATIVE_TAB);
         setBlockName("energon");
+        setLightLevel(0.75F);
     }
 
     @Override
