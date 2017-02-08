@@ -19,6 +19,11 @@ public class TileEnergonRefinery extends TileEntity implements IFluidHandler {
 
     @Override
     public void updateEntity() {
+        if (worldObj.isRemote) {
+            return;
+        }
+
+        boolean active = false;
         if (inputTank.getFluidAmount() > 0 && inputTank.getFluidAmount() % 2 == 0) {
             FluidStack drained = inputTank.drain(FluidContainerRegistry.BUCKET_VOLUME, false);
             if (drained != null) {
@@ -28,8 +33,14 @@ public class TileEnergonRefinery extends TileEntity implements IFluidHandler {
                     inputTank.drain(drained.amount, true);
                     outputTank.fill(output, true);
                     wasteTank.fill(waste, true);
+                    active = true;
                 }
             }
+        }
+        int oldMeta = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+        int newMeta = (active ? 4 : 0) + (oldMeta % 4);
+        if (oldMeta != newMeta) {
+            worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, newMeta, 2);
         }
     }
 

@@ -68,13 +68,13 @@ public class BlockEnergonLamp extends Block {
             String rotatedPostfix = rotated ? "_rotated" : "";
             icons[meta][2] = icons[meta][3] = icons[meta][4] = icons[meta][5] =
                     iconRegister.registerIcon("seaofrust:energon_lamp" + poweredPostfix);
-            icons[meta][1] = icons[meta][0] =
+            icons[meta][0] = icons[meta][1] =
                     iconRegister.registerIcon("seaofrust:energon_lamp" + poweredPostfix + "_top" + rotatedPostfix);
         }
     }
 
     @Override
     public IIcon getIcon(int side, int meta) {
-        return icons[meta][side];
+        return meta < icons.length ? icons[meta][side] : null;
     }
 }

@@ -11,7 +11,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-@Mod(modid = SeaOfRust.MODID, version = SeaOfRust.VERSION, name = SeaOfRust.NAME, dependencies = "after:transformers")
+@Mod(modid = SeaOfRust.MODID, version = SeaOfRust.VERSION, name = SeaOfRust.NAME, dependencies = "required-after:transformers;required-after:ThermalExpansion")
 public class SeaOfRust {
     public static final String MODID = "seaofrust";
     public static final String NAME = "The Sea of Rust";
