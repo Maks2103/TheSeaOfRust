@@ -18,3 +18,7 @@ item.bucket_of_refined_energon.name=Bucket of Refined Energon
 item.bucket_of_energon_refinement_waste.name=Bucket of Energon Refinement Waste
 death.attack.energon=%1$s tried to swim in the energon
 death.attack.acid=%1$s tried to swim in acid
+item.refined_energon_crystal.name=Refined Energon Crystal
+tile.refined_energon_cube.name=Refined Energon Cube
+pure_energon_crystal_description=Pure and highly refined crystal of energon. Grown in special conditions.
+press_shift=Hold SHIFT for info.
