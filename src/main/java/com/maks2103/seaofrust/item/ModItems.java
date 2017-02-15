@@ -16,7 +16,8 @@ public class ModItems {
     public static final ItemModBucket ENERGON_REFINEMENT_WASTE_BUCKET = new ItemModBucket(ModBlocks.ENERGON_REFINEMENT_WASTE);
     public static final ItemModBucket ENERGON_BUCKET = new ItemModBucket(ModBlocks.ENERGON);
     public static final ItemModBucket REFINED_ENERGON_BUCKET = new ItemModBucket(ModBlocks.REFINED_ENERGON);
-//    public static final ItemEnergonSword ENERGON_SWORD = new ItemEnergonSword();
+    public static final ItemEnergonSword ENERGON_SWORD = new ItemEnergonSword();
+    public static final ItemEnergonIron ENERGON_IRON = new ItemEnergonIron();
 
     public static void init() {
         GameRegistry.registerItem(RUST, "rust");
@@ -28,7 +29,8 @@ public class ModItems {
         FluidContainerRegistry.registerFluidContainer(ModFluids.ENERGON, new ItemStack(ENERGON_BUCKET), new ItemStack(Items.bucket));
         GameRegistry.registerItem(REFINED_ENERGON_BUCKET, "bucket_of_refined_energon");
         FluidContainerRegistry.registerFluidContainer(ModFluids.REFINED_ENERGON, new ItemStack(REFINED_ENERGON_BUCKET), new ItemStack(Items.bucket));
-//        GameRegistry.registerItem(ENERGON_SWORD, "energon_sword");
+        GameRegistry.registerItem(ENERGON_SWORD, "energon_sword");
+        GameRegistry.registerItem(ENERGON_IRON, "energon_iron");
     }
 
     @SideOnly(Side.CLIENT)

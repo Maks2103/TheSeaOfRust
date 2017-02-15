@@ -22,3 +22,6 @@ item.refined_energon_crystal.name=Refined Energon Crystal
 tile.refined_energon_cube.name=Refined Energon Cube
 pure_energon_crystal_description=Pure and highly refined crystal of energon. Grown in special conditions.
 press_shift=Hold SHIFT for info.
+tile.energon_refinery.name=Energon Refinery
+item.energon_sword.name=Energon Infused Metal Sword
+item.energon_iron.name=Energon Infused Iron Ingot

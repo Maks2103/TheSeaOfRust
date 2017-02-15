@@ -62,6 +62,13 @@ public class ModRecipes {
         );
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.REFINED_ENERGON_CUBE), ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL, ModItems.REFINED_ENERGON_CRYSTAL);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.REFINED_ENERGON_CRYSTAL, 9), ModBlocks.REFINED_ENERGON_CUBE);
+        GameRegistry.addShapedRecipe(new ItemStack(ModItems.ENERGON_SWORD),
+                " I ",
+                " I ",
+                " S ",
+                'I', ModItems.ENERGON_IRON,
+                'S', Items.stick
+        );
     }
 
     public static void clientInit() {

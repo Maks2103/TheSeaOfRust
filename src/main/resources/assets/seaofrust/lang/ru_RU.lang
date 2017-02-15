@@ -22,3 +22,6 @@ item.refined_energon_crystal.name=Кристалл Очищеного Энерг
 tile.refined_energon_cube.name=Куб Очищеного Энергона
 pure_energon_crystal_description=Прозрачный и тщательно очищеный кристал энергона. Выращен в специальных условиях.
 press_shift=Удерживайте Shift для информации.
+tile.energon_refinery.name=Завод Очистки Энергона
+item.energon_sword.name=Меч из энергонового металла
+item.energon_iron.name=Слиток энергонового железа
