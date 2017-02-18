@@ -65,9 +65,9 @@ public class ModRecipes {
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.ENERGON_SWORD),
                 " I ",
                 " I ",
-                " S ",
+                " C ",
                 'I', ModItems.ENERGON_IRON,
-                'S', Items.stick
+                'C', ModItems.REFINED_ENERGON_CRYSTAL
         );
     }
 
